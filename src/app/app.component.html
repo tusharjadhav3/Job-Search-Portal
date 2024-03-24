@@ -1,0 +1,13 @@
+<div class="main-container">
+  <h3 class="title">Find Your Job</h3>
+  <ul id="tabs">
+    <li>
+      <a [routerLink]="['/jobs']" routerLinkActive="active">JOBS</a>
+    </li>
+    <li>
+      <a [routerLink]="['/favorites']" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">FAVORITES</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>

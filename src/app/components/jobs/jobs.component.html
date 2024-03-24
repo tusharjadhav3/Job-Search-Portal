@@ -1,0 +1,18 @@
+<ng-container *ngFor="let job of jobsList">
+  <div class="jobs-container">
+    <div class="company-info">
+      <div class="company-logo mr-1">
+        <img id="companyLogo" width="70" height="70" alt="companyLogo" [src]="job.companyLogo" />
+      </div>
+      <div class="company-name">
+        <p class="title" (click)="goToJobDetails(job.id)">{{ job.title }}</p>
+        <span><b class="name">Company:</b> {{ job.companyName }}</span>
+        <span class="reference"><b class="name">Reference:</b> {{ job.reference }}</span>
+      </div>
+    </div>
+    <div class="favorite-section">
+      <i class="bi bi-star icon-star" id="star-{{ job.id }}" (click)="addToFavorite(job)"
+        [ngClass]="{ active: job?.isFavorite }"></i>
+    </div>
+  </div>
+</ng-container>

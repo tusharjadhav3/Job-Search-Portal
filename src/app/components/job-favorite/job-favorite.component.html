@@ -1,0 +1,20 @@
+<ng-container *ngIf="favoriteJobsList?.length; else noFavorites">
+  <ng-container *ngFor="let favoriteJob of favoriteJobsList">
+    <div class="jobs-container">
+      <div class="company-info">
+        <div class="company-logo mr-1">
+          <img id="companyLogo" width="70" height="70" alt="companyLogo" [src]="favoriteJob.companyLogo" />
+        </div>
+        <div class="company-name">
+          <p class="title" (click)="goToJobDetails(favoriteJob.id)">{{ favoriteJob.title }}</p>
+          <span><b class="name">Company:</b> {{ favoriteJob.companyName }}</span>
+          <span class="reference"><b class="name">Reference:</b> {{ favoriteJob.reference }}</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>
+
+<ng-template #noFavorites>
+  <div class="empty-data-container">No Record Found</div>
+</ng-template>

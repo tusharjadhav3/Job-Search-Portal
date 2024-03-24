@@ -1,0 +1,60 @@
+.jobs-container {
+  width: 90%;
+  margin: 1rem 2rem;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.favorite-section {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.name {
+  margin-right: 0.5rem;
+}
+
+.reference {
+  margin-left: 0.5rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  color: rgb(255, 255, 0);
+}
+
+.icon-star {
+  cursor: pointer;
+}
+
+.back {
+  margin-bottom: 2rem;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+
+.active-back {
+  color: black; 
+  cursor: pointer; 
+  font-style: normal;
+  font-weight: bold;
+
+}

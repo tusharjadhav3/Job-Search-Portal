@@ -1,0 +1,36 @@
+<ng-container *ngIf="jobInfo?.id">
+  <div class="jobs-container">
+    <div class="back">
+      <i class="bi bi-house-door-fill active-back" (click)="goToJobs()">Back</i>
+    </div>
+    <div class="company-info">
+      <div class="company-logo mr-1">
+        <img id="companyLogo" width="70" height="70" alt="companyLogo" [src]="jobInfo.companyLogo" />
+      </div>
+      <div class="company-name">
+        <p class="title">{{ jobInfo.title }}</p>
+        <ng-container *ngFor="let type of jobInfo.types">
+          <span class="name"><b>{{ type }} </b></span>
+        </ng-container>
+        <ng-container *ngFor="let industry of jobInfo.industries">
+          <span class="name"><b>{{ industry }}</b></span>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="company-other-info">
+      <p class="title">
+        <b class="name">Company:</b> {{ jobInfo.companyName }}
+      </p>
+      <p class="title">
+        <b class="name">Publish date:</b>{{ jobInfo.publishDate | date : "MM/dd/yy" }}
+      </p>
+      <p class="title"><b class="name">Location:</b>{{ jobInfo.location }}</p>
+      <p class="title"><b class="name">Reference:</b>{{ jobInfo.reference }}</p>
+      <p class="title">
+        <b class="name">Description:</b>
+      </p>
+      <div [innerHtml]="(jobInfo.description)"></div>
+    </div>
+  </div>
+</ng-container>

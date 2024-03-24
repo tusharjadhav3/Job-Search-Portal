@@ -1,0 +1,48 @@
+.jobs-container {
+  width: 90%;
+  margin: 1rem 2rem;
+  display: flex;
+ 
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.favorite-section {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.name {
+  margin-right: 0.5rem;
+}
+
+.reference {
+  margin-left: 0.5rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  color: rgb(255, 255, 0);
+}
+
+.icon-star {
+  cursor: pointer;
+}
